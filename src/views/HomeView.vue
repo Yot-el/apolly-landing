@@ -16,6 +16,6 @@
 
 	.home__hero {
 		height: 100dvh;
-		padding: 120px 0 80px 0;
+		padding: 170px 0 50px 0;
 	}
 </style>
