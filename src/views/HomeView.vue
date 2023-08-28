@@ -1,9 +1,11 @@
 <script setup>
+	import HeroSection from '@/components/HeroSection.vue'
 </script>
 
 <template>
 	<main class="home">
 		<h1 class="visually-hidden">Home page</h1>
+		<HeroSection class="home__hero" />
 	</main>
 </template>
 
