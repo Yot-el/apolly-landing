@@ -7,6 +7,8 @@
 			class="logo__image"
 			src="@/assets/images/logo.svg"
 			alt="Apolly's logo"
+			width="167"
+			height="28"
 		/>
 	</div>
 </template>
@@ -18,5 +20,16 @@
 		background-color: $light;
 		border-radius: 5px;
 		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+		@include mix.breakpoint(mobile) {
+			padding: 24px 10px;
+		}
+	}
+
+	.logo__image {
+		@include mix.breakpoint(mobile) {
+			width: 105px;
+			height: 16px;
+		}
 	}
 </style>

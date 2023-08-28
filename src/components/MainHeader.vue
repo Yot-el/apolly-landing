@@ -58,6 +58,10 @@
 		display: flex;
 		justify-content: space-between;
 		color: $light;
+
+		@include mix.breakpoint(mobile) {
+      display: none;
+    }
 	}
 	.header__links {
 		width: 135px;
@@ -70,16 +74,24 @@
 
 		background-color: $light;
 		border-radius: 5px;
+
+		@include mix.breakpoint(mobile) {
+			padding: 3px;
+		}
 	}
 	.header__logo {
 		display: none;
 		position: absolute;
-		top: 0;
+		top: -8px;
 		left: 50%;
-		transition: transformX(-50%) transformY(50%);
+		transform: translateX(-50%);
 
-		@include mix.breakpoint(tablet) {
-			display: block;
+		@include mix.breakpoint(tabletMenu) {
+			display: flex;
+		}
+
+		@include mix.breakpoint(mobile) {
+			left: 48%;
 		}
 	}
 	.header__button {
@@ -96,6 +108,10 @@
 		background-color: $accent;
 
 		transition: background-color 0.2s ease;
+
+		@include mix.breakpoint(mobile) {
+			padding: 12px 6px;
+		}
 		@include mix.hover {
 			background-color: $accent-muted;
 		}

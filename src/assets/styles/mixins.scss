@@ -42,5 +42,9 @@
 		@media only screen and (max-width: $desktop) {
 			@content;
 		}
+	} @else if $point == tabletMenu {
+		@media only screen and (max-width: $tablet-menu) {
+			@content;
+		}
 	}
 }
