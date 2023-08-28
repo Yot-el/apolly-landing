@@ -8,7 +8,7 @@ import { onMounted, ref } from 'vue';
   const menuMaxView = 1260
 
   const handleView = () => {
-    desktopView.value = window.innerWidth >= menuMaxView  ? true : false
+    desktopView.value = window.innerWidth > menuMaxView  ? true : false
   }
 
   onMounted(() => {
