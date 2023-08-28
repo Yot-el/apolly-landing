@@ -1,0 +1,54 @@
+@use './variables.scss' as *;
+@use './fonts.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100dvh;
+
+	font-family: $font-family;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.5em;
+	font-size: 16px;
+	color: $text-primary;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+#app {
+	position: relative;
+	width: 100vw;
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	margin: 0 auto;
+	width: calc(100vw - $desktop-margin * 2);
+
+	@include mix.breakpoint(tablet) {
+		width: calc(100vw - $tablet-margin * 2);
+	}
+
+	@include mix.breakpoint(mobile) {
+		width: calc(100vw - $mobile-margin * 2);
+	}
+}

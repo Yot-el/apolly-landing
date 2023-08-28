@@ -1,0 +1,29 @@
+// Device sizes (max)
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1600px;
+
+$mobile-margin: 16px;
+$tablet-margin: 40px;
+$desktop-margin: 135px;
+
+// Colors
+$accent: #5956e9;
+$accent-muted: #7572ff;
+$dark: #232233;
+$dark-muted: #6c6c72;
+$light: #ffffff;
+
+$text-primary: #232233;
+$text-secondary: #ffffff;
+$text-muted: #6c6c72;
+
+// Fonts
+$font-family: 'Josefin Sans', 'Arial', sans-serif;
+
+$fs-xs: 0.625rem;
+$fs-m: 1rem;
+$fs-mt: 1.25rem;
+$fs-l: 1.563rem;
+$fs-xl: 2rem;
+$fs-xxl: 3rem;

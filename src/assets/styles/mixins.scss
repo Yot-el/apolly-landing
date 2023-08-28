@@ -1,0 +1,46 @@
+@use './variables.scss' as *;
+
+@mixin adaptive-fs($mobile-fs, $tablet-fs, $desktop-fs) {
+	@media screen {
+		font-size: $desktop-fs;
+	}
+
+	@media screen and (max-width: $tablet) {
+		font-size: $tablet-fs;
+	}
+
+	@media screen and (max-width: $mobile) {
+		font-size: $mobile-fs;
+	}
+}
+
+@mixin hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin retina-image($image, $ext) {
+	background-image: url('@/assets/images/#{$image}.#{$ext}');
+	@media (min-resolution: 2dppx) {
+		background-image: url('@/assets/images/#{$image}@2x.#{$ext}');
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media only screen and (max-width: $mobile) {
+			@content;
+		}
+	} @else if $point == tablet {
+		@media only screen and (max-width: $tablet) {
+			@content;
+		}
+	} @else if $point == desktop {
+		@media only screen and (max-width: $desktop) {
+			@content;
+		}
+	}
+}
