@@ -1,11 +1,13 @@
 <script setup>
 	import HeroSection from '@/components/HeroSection.vue'
+	import AboutAppSection from '@/components/AboutAppSection.vue';
 </script>
 
 <template>
 	<main class="home">
 		<h1 class="visually-hidden">Home page</h1>
 		<HeroSection class="home__hero" />
+		<AboutAppSection />
 	</main>
 </template>
 
@@ -17,5 +19,13 @@
 	.home__hero {
 		height: 100dvh;
 		padding: 170px 0 50px 0;
+
+		@include mix.breakpoint(tablet) {
+			padding: 130px 0 50px 0;
+		}
+
+		@include mix.breakpoint(mobile) {
+			height: auto;
+		}
 	}
 </style>

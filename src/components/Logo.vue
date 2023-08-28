@@ -1,8 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup></script>
+<script setup>
+	import { RouterLink } from 'vue-router'
+</script>
 
 <template>
-	<div class="logo">
+	<RouterLink class="logo" to="/">
 		<img
 			class="logo__image"
 			src="@/assets/images/logo.svg"
@@ -10,7 +12,7 @@
 			width="167"
 			height="28"
 		/>
-	</div>
+	</RouterLink>
 </template>
 
 <style lang="scss" scoped>

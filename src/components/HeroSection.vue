@@ -43,8 +43,18 @@
 		display: flex;
 		justify-content: center;
 		gap: 175px;
+
+		@include mix.breakpoint(tablet) {
+			gap: 130px;
+		}
+
+		@include mix.breakpoint(mobile) {
+			gap: 50px;
+			flex-direction: column;
+		}
 	}
 	.hero__left {
+		display: flex;
 		position: relative;
 		align-self: center;
 
@@ -58,6 +68,23 @@
 			height: calc(100% + 30px * 2);
 			transform: translateY(-15px);
 			border: 18px solid $accent-muted;
+
+			@include mix.breakpoint(tablet) {
+				width: 95%;
+				height: calc(100% + 15px * 2);
+				transform: translateY(-5px);
+			}
+
+			@include mix.breakpoint(mobile) {
+				width: 87%;
+				height: calc(100% + 6px * 2);
+				transform: translateY(15px);
+				border: 10px solid $accent-muted;
+		}
+		}
+
+		@include mix.breakpoint(mobile) {
+			padding: 0 20px 0 0;
 		}
 	}
 	.hero__content {
@@ -67,6 +94,15 @@
 		width: 570px;
 
 		background-color: $light;
+
+		@include mix.breakpoint(tablet) {
+			padding: 15px 7px 15px 20px;
+			width: 356px;
+		}
+
+		@include mix.breakpoint(mobile) {
+			width: 100%;
+		}
 	}
 	.hero__title {
 		@include mix.adaptive-fs($fs-l, $fs-l, $fs-xxl);
@@ -82,11 +118,21 @@
 	}
 
 	.hero__image-container {
-		height: 75dvh;
+		display: flex;
+		align-items: center;
+
+		@include mix.breakpoint(mobile) {
+			justify-content: center;
+		}
 	}
 
 	.hero__image {
-		height: 100%;
-		width: auto;
+		min-width: 250px;
+		width: 270px;
+
+		@include mix.breakpoint(tablet) {
+			width: 215px;
+			min-width: 215px;
+		}
 	}
 </style>
