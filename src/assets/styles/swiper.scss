@@ -1,0 +1,74 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as mix;
+
+swiper-container::part(container) {
+	padding: 0 0 40px 0;
+}
+
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+	--swiper-navigation-size: 20px;
+	color: $accent;
+
+	& svg {
+		transform: scale(0.6);
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		transform: translateX(-50%) translateY(-50%);
+		border: 2px solid $accent;
+	}
+}
+
+swiper-container::part(pagination) {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+swiper-container::part(bullet),
+swiper-container::part(bullet-active) {
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	border: none;
+	background-color: $accent;
+	transition: all 0.2s ease;
+
+	@include mix.hover {
+		background-color: $accent-muted;
+	}
+
+	&::after {
+		content: '';
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		position: absolute;
+		width: 0;
+		height: 0;
+		background-color: transparent;
+		border: 2px solid transparent;
+
+		transition: all 0.2s ease;
+	}
+}
+
+swiper-container::part(bullet-active) {
+	&::after {
+		border-color: $accent;
+		width: 20px;
+		height: 20px;
+	}
+}

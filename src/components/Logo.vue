@@ -4,7 +4,10 @@
 </script>
 
 <template>
-	<RouterLink class="logo" to="/">
+	<RouterLink
+		class="logo"
+		to="/"
+	>
 		<img
 			class="logo__image"
 			src="@/assets/images/logo.svg"

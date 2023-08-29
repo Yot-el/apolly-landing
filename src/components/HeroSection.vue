@@ -80,7 +80,7 @@
 				height: calc(100% + 6px * 2);
 				transform: translateY(15px);
 				border: 10px solid $accent-muted;
-		}
+			}
 		}
 
 		@include mix.breakpoint(mobile) {

@@ -1,6 +1,7 @@
 <script setup>
 	import HeroSection from '@/components/HeroSection.vue'
-	import AboutAppSection from '@/components/AboutAppSection.vue';
+	import AboutAppSection from '@/components/AboutAppSection.vue'
+	import AppInterfaceSection from '@/components/AppInterfaceSection.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@
 		<h1 class="visually-hidden">Home page</h1>
 		<HeroSection class="home__hero" />
 		<AboutAppSection />
+		<AppInterfaceSection />
 	</main>
 </template>
 

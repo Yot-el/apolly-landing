@@ -1,5 +1,6 @@
 @use './variables.scss' as *;
 @use './fonts.scss';
+@use './swiper.scss';
 
 * {
 	box-sizing: border-box;
@@ -21,9 +22,9 @@ body {
 }
 
 img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
+	width: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .visually-hidden {

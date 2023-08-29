@@ -60,8 +60,8 @@
 		color: $light;
 
 		@include mix.breakpoint(mobile) {
-      display: none;
-    }
+			display: none;
+		}
 	}
 	.header__links {
 		width: 135px;
