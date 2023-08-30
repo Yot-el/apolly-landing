@@ -18,9 +18,8 @@
 
 		timeline
 			.set('.footer__email', { width: 0, padding: 0 })
-			.set('.footer__form', { padding: 0, width: 52 })
+			.set('.footer__form', { width: 52 })
 			.from('.footer__inner', { opacity: 0, duration: 0.8 })
-			.to('.footer__form', { padding: 2, duration: 0.2 })
 			.add('.footer__email', 'startExpand')
 			.add('.footer__form', 'startExpand')
 			.to(
