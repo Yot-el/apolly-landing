@@ -4,15 +4,18 @@
 
 <template>
 	<section class="hero">
-		<Transition name="fade" appear>
+		<Transition
+			name="fade"
+			appear
+		>
 			<div class="hero__inner container">
 				<div class="hero__left">
 					<div class="hero__content">
 						<h2 class="hero__title">A great app makes your life better</h2>
 						<p class="hero__description">
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-							sint. Velit officia consequat duis enim velit mollit. Exercitation
-							veniam consequat sunt nostrud amet.
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+							amet sint. Velit officia consequat duis enim velit mollit.
+							Exercitation veniam consequat sunt nostrud amet.
 						</p>
 						<StoresLinks class="hero__buttons" />
 					</div>

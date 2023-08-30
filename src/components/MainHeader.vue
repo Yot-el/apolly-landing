@@ -1,12 +1,12 @@
 <script setup>
-	import { onMounted } from 'vue';
+	import { onMounted } from 'vue'
 	import SocialLinks from '@/components/SocialLinks.vue'
 	import Logo from '@/components/Logo.vue'
 	import NavMenu from '@/components/NavMenu.vue'
 	import HeaderContacts from '@/components/HeaderContacts.vue'
 
 	import gsap from 'gsap'
-	import ScrollTrigger from "gsap/ScrollTrigger"
+	import ScrollTrigger from 'gsap/ScrollTrigger'
 
 	gsap.registerPlugin(ScrollTrigger)
 
@@ -14,12 +14,16 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.header',
-				start: 'top bottom',
+				start: 'top bottom'
 			}
 		})
 
-		timeline
-		.from('.header', {y: '-100%', opacity: 0, duration: 1, ease: 'power3.out'})
+		timeline.from('.header', {
+			y: '-100%',
+			opacity: 0,
+			duration: 1,
+			ease: 'power3.out'
+		})
 	})
 
 	const companyLinks = [

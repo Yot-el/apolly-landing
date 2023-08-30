@@ -1,25 +1,28 @@
 <script setup>
-	import { onMounted } from 'vue';
+	import { onMounted } from 'vue'
 	import SectionLayout from '@/components/SectionLayout.vue'
 
 	import gsap from 'gsap'
-	import ScrollTrigger from "gsap/ScrollTrigger"
+	import ScrollTrigger from 'gsap/ScrollTrigger'
 
 	gsap.registerPlugin(ScrollTrigger)
 
 	onMounted(() => {
 		const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: '.about',
-			start: 'top bottom',
-		}
-	})
+			scrollTrigger: {
+				trigger: '.about',
+				start: 'top bottom'
+			}
+		})
 
-	timeline
-	.set('.about-card', {overflow: 'hidden'})
-	.from('.about__image-container', {opacity: 0, x: -100, duration: 0.5})
-	.fromTo('.about-card', {height: 0, opacity: 0}, {height: 'auto', opacity: 1, duration: 0.6, stagger: 0.5})
-
+		timeline
+			.set('.about-card', { overflow: 'hidden' })
+			.from('.about__image-container', { opacity: 0, x: -100, duration: 0.5 })
+			.fromTo(
+				'.about-card',
+				{ height: 0, opacity: 0 },
+				{ height: 'auto', opacity: 1, duration: 0.6, stagger: 0.5 }
+			)
 	})
 </script>
 
@@ -79,6 +82,7 @@
 		display: grid;
 		grid-template-columns: 0.75fr 1fr;
 		gap: min(15%, 150px);
+		min-height: 560px;
 
 		@include mix.breakpoint(tablet) {
 			grid-template-columns: 1fr;
@@ -135,7 +139,7 @@
 	.about__image-container {
 		min-width: 386px;
 		position: relative;
-		align-self: start;
+		align-self: center;
 		justify-self: end;
 		display: flex;
 		justify-content: end;
