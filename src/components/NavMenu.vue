@@ -2,19 +2,34 @@
 	import { onMounted, ref } from 'vue'
 	import Logo from '@/components/Logo.vue'
 	import { RouterLink } from 'vue-router'
+	import gsap from 'gsap'
 
 	const isOpen = ref(false)
 	const desktopView = ref(true)
+	const menu = ref(null)
 	const menuMaxView = 1260
 
 	const handleView = () => {
 		desktopView.value = window.innerWidth > menuMaxView ? true : false
-	}
 
+		if (desktopView.value) {
+			menu.value.style = ''
+		}
+	}
 	onMounted(() => {
 		handleView()
 		window.addEventListener('resize', handleView)
 	})
+
+	const tl = gsap.timeline({paused: true})
+	onMounted(() => {
+		tl.to('.site-menu__list', {opacity: 1, height: 'auto', duration: 0.5}).reverse()
+	})
+	
+
+	const onMenuButtonClick = () => {
+		tl.reversed(!tl.reversed());
+	}
 </script>
 
 <template>
@@ -24,13 +39,13 @@
 				'site-menu__button',
 				isOpen ? 'site-menu__button--opened' : 'site-menu__button--closed'
 			]"
-			@click="isOpen = !isOpen"
+			@click.prevent="onMenuButtonClick"
 		>
 			<span class="visually-hidden">Menu button</span>
 		</button>
 		<ul
-			v-show="isOpen || desktopView"
-			class="site-menu__list"
+			:class="['site-menu__list', {'site-menu__list--mobile': !desktopView}]"
+			ref="menu"
 		>
 			<li class="site-menu__item">
 				<RouterLink
@@ -120,11 +135,17 @@
 			border-radius: 10px;
 			position: absolute;
 			flex-direction: column;
-			padding: 30px;
 			gap: 10px;
 			box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
 			background-color: $light;
+		}
+
+		&--mobile {
+			overflow: hidden;
+			padding: 30px;
+			opacity: 0;
+			height: 0;
 		}
 	}
 	.site-menu__item {
