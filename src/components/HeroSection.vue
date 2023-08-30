@@ -46,12 +46,8 @@
 
 	.hero__inner {
 		display: flex;
-		justify-content: center;
-		gap: 175px;
-
-		@include mix.breakpoint(tablet) {
-			gap: 130px;
-		}
+		justify-content: space-between;
+		gap: 80px;
 
 		@include mix.breakpoint(mobile) {
 			gap: 50px;
@@ -63,50 +59,52 @@
 		position: relative;
 		align-self: center;
 
+		max-width: 570px;
+		min-width: 470px;
+
+		@include mix.breakpoint(tablet) {
+			min-width: 356px;
+			max-width: 470px;
+		}
+
+		@include mix.breakpoint(mobile) {
+			margin: 0 20px;
+			max-width: 450px;
+			min-width: 270px;
+		}
+
 		&::after {
 			content: '';
 			z-index: 0;
 			position: absolute;
-			width: 100%;
-			top: -30px;
-			left: 30px;
-			height: calc(100% + 30px * 2);
-			transform: translateY(-15px);
+			width: 97%;
+			top: 0;
+			left: 0;
+			height: calc(100% + 20px * 2);
+			transform: translateY(-35px) translateX(25px);
 			border: 18px solid $accent-muted;
 
 			@include mix.breakpoint(tablet) {
 				width: 95%;
 				height: calc(100% + 15px * 2);
-				transform: translateY(-5px);
 			}
 
 			@include mix.breakpoint(mobile) {
-				width: 87%;
-				height: calc(100% + 6px * 2);
-				transform: translateY(15px);
+				width: 90%;
+				height: calc(100% + 10px * 2);
+				transform: translateY(-17px) translateX(40px);
 				border: 10px solid $accent-muted;
 			}
-		}
-
-		@include mix.breakpoint(mobile) {
-			padding: 0 20px 0 0;
 		}
 	}
 	.hero__content {
 		position: relative;
 		z-index: 1;
 		padding: 40px 20px 40px 30px;
-		width: 570px;
-
 		background-color: $light;
 
 		@include mix.breakpoint(tablet) {
 			padding: 15px 7px 15px 20px;
-			width: 356px;
-		}
-
-		@include mix.breakpoint(mobile) {
-			width: 100%;
 		}
 	}
 	.hero__title {

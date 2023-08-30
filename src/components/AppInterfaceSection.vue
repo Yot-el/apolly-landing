@@ -107,6 +107,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@include mix.breakpoint(mobile) {
+			width: 100vw;
+			overflow: hidden;
+		}
 	}
 	.swiper__button {
 		display: block;

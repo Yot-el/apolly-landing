@@ -12,7 +12,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.footer',
-				start: 'top bottom'
+				start: 'center bottom'
 			}
 		})
 
@@ -143,6 +143,10 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(100px, 1fr));
 		gap: 50px;
+
+    @include mix.breakpoint(mobile) {
+      grid-template-columns: minmax(100px, 1fr);
+    }
 	}
 
 	.footer__social-links {
