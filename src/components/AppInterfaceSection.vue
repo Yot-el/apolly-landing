@@ -2,6 +2,7 @@
 	import { onMounted, ref } from 'vue'
 	import SectionLayout from '@/components/SectionLayout.vue'
 
+	// Swiper
 	import { register } from 'swiper/element/bundle'
 	register()
 

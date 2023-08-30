@@ -32,6 +32,7 @@
 	}
 
 	.logo__image {
+		will-change: transform;
 		@include mix.breakpoint(mobile) {
 			width: 105px;
 			height: 16px;

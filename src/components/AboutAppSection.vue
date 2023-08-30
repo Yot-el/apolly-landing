@@ -1,5 +1,26 @@
 <script setup>
+	import { onMounted } from 'vue';
 	import SectionLayout from '@/components/SectionLayout.vue'
+
+	import gsap from 'gsap'
+	import ScrollTrigger from "gsap/ScrollTrigger"
+
+	gsap.registerPlugin(ScrollTrigger)
+
+	onMounted(() => {
+		const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: '.about',
+			start: 'top bottom',
+		}
+	})
+
+	timeline
+	.set('.about-card', {overflow: 'hidden'})
+	.from('.about__image-container', {opacity: 0, x: -100, duration: 0.5})
+	.fromTo('.about-card', {height: 0, opacity: 0}, {height: 'auto', opacity: 1, duration: 0.6, stagger: 0.5})
+
+	})
 </script>
 
 <template>

@@ -44,6 +44,7 @@
 
 	.stores-links__links {
 		display: flex;
+		min-height: 58px;
 	}
 
 	.stores-links__link {

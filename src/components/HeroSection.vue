@@ -4,28 +4,30 @@
 
 <template>
 	<section class="hero">
-		<div class="hero__inner container">
-			<div class="hero__left">
-				<div class="hero__content">
-					<h2 class="hero__title">A great app makes your life better</h2>
-					<p class="hero__description">
-						Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-						sint. Velit officia consequat duis enim velit mollit. Exercitation
-						veniam consequat sunt nostrud amet.
-					</p>
-					<StoresLinks class="hero__buttons" />
+		<Transition name="fade" appear>
+			<div class="hero__inner container">
+				<div class="hero__left">
+					<div class="hero__content">
+						<h2 class="hero__title">A great app makes your life better</h2>
+						<p class="hero__description">
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+							sint. Velit officia consequat duis enim velit mollit. Exercitation
+							veniam consequat sunt nostrud amet.
+						</p>
+						<StoresLinks class="hero__buttons" />
+					</div>
+				</div>
+				<div class="hero__image-container">
+					<img
+						class="hero__image"
+						src="@/assets/images/hero.png"
+						alt="mobile app view"
+						width="363"
+						height="725"
+					/>
 				</div>
 			</div>
-			<div class="hero__image-container">
-				<img
-					class="hero__image"
-					src="@/assets/images/hero.png"
-					alt="mobile app view"
-					width="363"
-					height="725"
-				/>
-			</div>
-		</div>
+		</Transition>
 	</section>
 </template>
 
@@ -134,5 +136,12 @@
 			width: 215px;
 			min-width: 215px;
 		}
+	}
+
+	.fade-enter-from {
+		opacity: 0;
+	}
+	.fade-enter-active {
+		transition: opacity 1s ease-in-out;
 	}
 </style>
