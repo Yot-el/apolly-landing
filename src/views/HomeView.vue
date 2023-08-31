@@ -5,6 +5,7 @@
 	import TeamSection from '@/components/TeamSection.vue'
 	import AppFeaturesSection from '@/components/AppFeaturesSection.vue'
 	import HowToUseSection from '@/components/HowToUseSection.vue'
+	import DownloadAppSection from '@/components/DownloadAppSection.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@
 		<AppInterfaceSection />
 		<HowToUseSection class="home__how-to-use" />
 		<TeamSection />
+		<DownloadAppSection />
 	</main>
 </template>
 

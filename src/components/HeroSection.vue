@@ -17,7 +17,9 @@
 							amet sint. Velit officia consequat duis enim velit mollit.
 							Exercitation veniam consequat sunt nostrud amet.
 						</p>
-						<StoresLinks class="hero__buttons" />
+						<StoresLinks class="hero__buttons">
+							<template #title>Download app now</template>
+						</StoresLinks>
 					</div>
 				</div>
 				<div class="hero__image-container">

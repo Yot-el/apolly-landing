@@ -32,12 +32,26 @@
 
 			color: $light;
 		}
+
+		&--left {
+			& .section__wrapper {
+				align-items: start;
+				text-align: start;
+				width: auto;
+
+				& .section__description {
+					width: min(85%, 720px);
+				}
+			}
+		}
 	}
 	.section__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 18px;
+
+		text-align: center;
 	}
 	.section__title {
 		margin: 0;
@@ -46,13 +60,11 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		line-height: 1.5em;
-		text-align: center;
 	}
 
 	.section__description {
 		width: min(55%, 720px);
 		margin: 0 0 40px 0;
-		text-align: center;
 
 		@include mix.breakpoint(tablet) {
 			width: 65%;

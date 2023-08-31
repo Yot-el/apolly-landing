@@ -2,7 +2,9 @@
 
 <template>
 	<article class="stores-links">
-		<h3 class="stores-links__title">Download app now</h3>
+		<h3 class="stores-links__title">
+			<slot name="title"></slot>
+		</h3>
 		<div class="stores-links__links">
 			<a
 				class="stores-links__link"
