@@ -1,6 +1,6 @@
 <script setup>
 	import { onMounted, ref } from 'vue'
-	import Logo from '@/components/Logo.vue'
+	import Logo from '@/components/header/Logo.vue'
 	import { RouterLink } from 'vue-router'
 	import gsap from 'gsap'
 

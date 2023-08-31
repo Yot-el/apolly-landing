@@ -1,9 +1,9 @@
 <script setup>
 	import { onMounted } from 'vue'
 	import SocialLinks from '@/components/SocialLinks.vue'
-	import Logo from '@/components/Logo.vue'
-	import NavMenu from '@/components/NavMenu.vue'
-	import HeaderContacts from '@/components/HeaderContacts.vue'
+	import Logo from '@/components/header/Logo.vue'
+	import NavMenu from '@/components/header/NavMenu.vue'
+	import HeaderContacts from '@/components/header/HeaderContacts.vue'
 
 	import gsap from 'gsap'
 	import ScrollTrigger from 'gsap/ScrollTrigger'
