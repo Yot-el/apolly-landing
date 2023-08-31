@@ -17,6 +17,7 @@
 <style lang="scss" scoped>
 	.section {
 		padding: 70px 0;
+		position: relative;
 
 		@include mix.breakpoint(mobile) {
 			padding: 40px 0;

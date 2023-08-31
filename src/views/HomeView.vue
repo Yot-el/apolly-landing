@@ -4,6 +4,7 @@
 	import AppInterfaceSection from '@/components/AppInterfaceSection.vue'
 	import TeamSection from '@/components/TeamSection.vue'
 	import AppFeaturesSection from '@/components/AppFeaturesSection.vue'
+	import HowToUseSection from '@/components/HowToUseSection.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@
 		<AboutAppSection />
 		<AppFeaturesSection />
 		<AppInterfaceSection />
+		<HowToUseSection class="home__how-to-use" />
 		<TeamSection />
 	</main>
 </template>
@@ -33,5 +35,9 @@
 		@include mix.breakpoint(mobile) {
 			height: auto;
 		}
+	}
+	.home__how-to-use {
+		margin: 0 0 200px 0;
+		padding-bottom: 170px;
 	}
 </style>
