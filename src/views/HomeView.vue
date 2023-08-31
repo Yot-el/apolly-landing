@@ -2,6 +2,7 @@
 	import HeroSection from '@/components/HeroSection.vue'
 	import AboutAppSection from '@/components/AboutAppSection.vue'
 	import AppInterfaceSection from '@/components/AppInterfaceSection.vue'
+	import TeamSection from '@/components/TeamSection.vue';
 </script>
 
 <template>
@@ -10,6 +11,7 @@
 		<HeroSection class="home__hero" />
 		<AboutAppSection />
 		<AppInterfaceSection />
+		<TeamSection />
 	</main>
 </template>
 
