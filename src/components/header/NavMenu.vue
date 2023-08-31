@@ -31,6 +31,7 @@
 	})
 
 	const onMenuButtonClick = () => {
+		isOpen.value = !isOpen.value
 		tl.reversed(!tl.reversed())
 	}
 </script>
@@ -52,6 +53,7 @@
 		>
 			<li class="site-menu__item">
 				<RouterLink
+					activeClass="site-menu__link--active"
 					class="site-menu__link"
 					to="/"
 					>Home</RouterLink
@@ -59,6 +61,7 @@
 			</li>
 			<li class="site-menu__item">
 				<RouterLink
+					activeClass="site-menu__link--active"
 					class="site-menu__link"
 					to="/about"
 					>About</RouterLink
@@ -66,6 +69,7 @@
 			</li>
 			<li class="site-menu__item">
 				<RouterLink
+					activeClass="site-menu__link--active"
 					class="site-menu__link"
 					to="/features"
 					>Features</RouterLink
@@ -76,6 +80,7 @@
 			</li>
 			<li class="site-menu__item">
 				<RouterLink
+					activeClass="site-menu__link--active"
 					class="site-menu__link"
 					to="/screenshots"
 					>Screenshots</RouterLink
@@ -83,6 +88,7 @@
 			</li>
 			<li class="site-menu__item">
 				<RouterLink
+					activeClass="site-menu__link--active"
 					class="site-menu__link"
 					to="/blog"
 					>Blog</RouterLink
@@ -180,6 +186,11 @@
 		text-underline-offset: 3px;
 
 		transition: all 0.2s ease;
+		
+		&--active {
+			color: $accent;
+			text-decoration-color: $accent;
+		}
 
 		@include mix.hover {
 			color: $accent;
