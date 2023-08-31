@@ -1,4 +1,5 @@
 <script setup>
+	import ViewLayout from '@/views/ViewLayout.vue'
 	import HeroSection from '@/components/HeroSection.vue'
 	import AboutAppSection from '@/components/AboutAppSection.vue'
 	import AppInterfaceSection from '@/components/AppInterfaceSection.vue'
@@ -9,34 +10,25 @@
 </script>
 
 <template>
-	<main class="home">
-		<h1 class="visually-hidden">Home page</h1>
-		<HeroSection class="home__hero" />
-		<AboutAppSection />
-		<AppFeaturesSection />
-		<AppInterfaceSection />
-		<HowToUseSection class="home__how-to-use" />
-		<TeamSection />
-		<DownloadAppSection />
-	</main>
+	<ViewLayout class="home main--full-page-header">
+		<template #header>
+			<h1 class="visually-hidden">Home page</h1>
+			<HeroSection class="home__hero" />
+		</template>
+		<template #content>
+			<AboutAppSection />
+			<AppFeaturesSection />
+			<AppInterfaceSection />
+			<HowToUseSection class="home__how-to-use" />
+			<TeamSection />
+			<DownloadAppSection />
+		</template>
+	</ViewLayout>
 </template>
 
 <style lang="scss" scoped>
-	.home {
-		flex-grow: 1;
-	}
-
 	.home__hero {
-		height: 100dvh;
-		padding: 170px 0 50px 0;
-
-		@include mix.breakpoint(tablet) {
-			padding: 130px 0 50px 0;
-		}
-
-		@include mix.breakpoint(mobile) {
-			height: auto;
-		}
+		width: 100%;
 	}
 	.home__how-to-use {
 		margin: 0 0 200px 0;

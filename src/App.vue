@@ -18,4 +18,7 @@
 		transform: translateX(-50%);
 		z-index: 2;
 	}
+	.app__main {
+		flex-grow: 1;
+	}
 </style>
