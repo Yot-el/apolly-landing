@@ -37,7 +37,7 @@
 <style lang="scss" scoped>
 	.hero {
 		display: flex;
-		@include mix.retina-image('hero-background', 'jpg');
+		@include mix.retina-image('background', 'jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;

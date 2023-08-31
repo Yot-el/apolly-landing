@@ -21,6 +21,16 @@
 		@include mix.breakpoint(mobile) {
 			padding: 40px 0;
 		}
+
+		&--has-background {
+			@include mix.retina-image('background', 'jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: $accent;
+
+			color: $light;
+		}
 	}
 	.section__wrapper {
 		display: flex;
