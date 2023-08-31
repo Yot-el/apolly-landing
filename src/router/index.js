@@ -10,10 +10,11 @@ const router = createRouter({
 			component: HomeView
 		},
 		{
-      path: '/:pathMatch(.*)*',
-      name: '404',
-      component: () => import(/* webpackChunkName: "NotFound" */'@/views/404View.vue')
-    }
+			path: '/:pathMatch(.*)*',
+			name: '404',
+			component: () =>
+				import(/* webpackChunkName: "NotFound" */ '@/views/404View.vue')
+		}
 	]
 })
 

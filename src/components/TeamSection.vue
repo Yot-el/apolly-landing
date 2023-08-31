@@ -128,21 +128,21 @@
 <style lang="scss" scoped>
 	.team {
 		display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 5%;
 		padding: 0;
 		list-style: none;
 
 		@include mix.breakpoint(mobile) {
-      align-content: center;
+			align-content: center;
 			flex-direction: column;
 		}
 	}
 
 	.team__item {
 		padding: 30px 15px 50px 15px;
-    width: clamp(213px, 30%, 400px);
+		width: clamp(213px, 30%, 400px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -150,9 +150,9 @@
 		border-radius: 10px;
 		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
-    @include mix.breakpoint(mobile) {
-      width: clamp(200px, 100%, 343px)
-    }
+		@include mix.breakpoint(mobile) {
+			width: clamp(200px, 100%, 343px);
+		}
 	}
 	.team__image-container {
 		display: flex;

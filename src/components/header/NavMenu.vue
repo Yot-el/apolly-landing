@@ -186,7 +186,7 @@
 		text-underline-offset: 3px;
 
 		transition: all 0.2s ease;
-		
+
 		&--active {
 			color: $accent;
 			text-decoration-color: $accent;
