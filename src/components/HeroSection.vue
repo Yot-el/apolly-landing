@@ -39,11 +39,7 @@
 <style lang="scss" scoped>
 	.hero {
 		display: flex;
-		@include mix.retina-image('background', 'jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: $accent;
+		color: $text-primary;
 	}
 
 	.hero__inner {
