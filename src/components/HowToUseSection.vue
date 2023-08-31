@@ -34,7 +34,13 @@ onMounted(() => {
 
 const onVideoClick = () => {
   video.value.paused ? video.value.play() : video.value.pause()
-  controlTimeline.reversed(!controlTimeline.reversed())
+}
+
+const onVideoPlay = () => {
+  controlTimeline.reversed(false)
+}
+const onVideoPause = () => {
+  controlTimeline.reversed(true)
 }
 </script>
 
@@ -53,7 +59,7 @@ const onVideoClick = () => {
             <span class="visually-hidden">Play or pause</span>
           </button>
         </div>
-        <video class="video__content" ref="video">
+        <video class="video__content" ref="video" @play="onVideoPlay" @pause="onVideoPause">
           <source src="@/assets/videos/how-to-use.mp4" type="video/mp4"/>
         </video>
       </div>
