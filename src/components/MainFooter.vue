@@ -144,9 +144,9 @@
 		grid-template-columns: repeat(3, minmax(100px, 1fr));
 		gap: 50px;
 
-    @include mix.breakpoint(mobile) {
-      grid-template-columns: minmax(100px, 1fr);
-    }
+		@include mix.breakpoint(mobile) {
+			grid-template-columns: minmax(100px, 1fr);
+		}
 	}
 
 	.footer__social-links {

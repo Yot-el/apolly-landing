@@ -21,14 +21,17 @@
 		window.addEventListener('resize', handleView)
 	})
 
-	const tl = gsap.timeline({paused: true})
+	const tl = gsap.timeline({ paused: true })
 	onMounted(() => {
-		tl.to('.site-menu__list', {opacity: 1, height: 'auto', duration: 0.5}).reverse()
+		tl.to('.site-menu__list', {
+			opacity: 1,
+			height: 'auto',
+			duration: 0.5
+		}).reverse()
 	})
-	
 
 	const onMenuButtonClick = () => {
-		tl.reversed(!tl.reversed());
+		tl.reversed(!tl.reversed())
 	}
 </script>
 
@@ -44,7 +47,7 @@
 			<span class="visually-hidden">Menu button</span>
 		</button>
 		<ul
-			:class="['site-menu__list', {'site-menu__list--mobile': !desktopView}]"
+			:class="['site-menu__list', { 'site-menu__list--mobile': !desktopView }]"
 			ref="menu"
 		>
 			<li class="site-menu__item">
