@@ -134,7 +134,7 @@
 
 <style lang="scss" scoped>
 	.footer {
-		padding: 230px 0 0 0;
+		padding: 50px 0 0 0;
 		background-color: $dark;
 		color: $light;
 	}

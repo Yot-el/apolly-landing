@@ -129,14 +129,10 @@
 	.team {
 		display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-		gap: 15px;
+    justify-content: center;
+		gap: 5%;
 		padding: 0;
 		list-style: none;
-
-		@include mix.breakpoint(tablet) {
-			gap: 15px;
-		}
 
 		@include mix.breakpoint(mobile) {
       align-content: center;
