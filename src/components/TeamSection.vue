@@ -3,9 +3,6 @@
 	import SectionLayout from '@/components/SectionLayout.vue'
 	import SocialLinks from '@/components/SocialLinks.vue'
 	import gsap from 'gsap'
-	import ScrollTrigger from 'gsap/ScrollTrigger'
-
-	gsap.registerPlugin(ScrollTrigger)
 
 	onMounted(() => {
 		const timeline = gsap.timeline({

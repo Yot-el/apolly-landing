@@ -2,9 +2,6 @@
 	import { onMounted } from 'vue'
 	import SectionLayout from '@/components/SectionLayout.vue'
 	import gsap from 'gsap'
-	import ScrollTrigger from 'gsap/ScrollTrigger'
-
-	gsap.registerPlugin(ScrollTrigger)
 
 	onMounted(() => {
 		const timeline = gsap.timeline({

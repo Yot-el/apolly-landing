@@ -2,9 +2,7 @@
 	import { ref, onMounted } from 'vue'
 	import SectionLayout from '@/components/SectionLayout.vue'
 	import gsap from 'gsap'
-	import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-	gsap.registerPlugin(ScrollTrigger)
 	const video = ref(null)
 
 	// Appear animation

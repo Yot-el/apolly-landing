@@ -2,6 +2,11 @@
 	import { RouterView } from 'vue-router'
 	import MainHeader from '@/components/header/MainHeader.vue'
 	import MainFooter from '@/components/footer/MainFooter.vue'
+
+	import gsap from 'gsap'
+	import ScrollTrigger from 'gsap/ScrollTrigger'
+
+	gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <template>

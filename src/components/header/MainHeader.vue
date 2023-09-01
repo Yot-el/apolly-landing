@@ -4,11 +4,7 @@
 	import Logo from '@/components/header/Logo.vue'
 	import NavMenu from '@/components/header/NavMenu.vue'
 	import HeaderContacts from '@/components/header/HeaderContacts.vue'
-
 	import gsap from 'gsap'
-	import ScrollTrigger from 'gsap/ScrollTrigger'
-
-	gsap.registerPlugin(ScrollTrigger)
 
 	onMounted(() => {
 		const timeline = gsap.timeline({
